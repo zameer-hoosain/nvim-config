@@ -51,11 +51,11 @@ keymap("n", "<leader>e", "<C-Y>", opts)
 keymap("n", "<leader>b", ":Git blame<CR>", opts)
 
 -- Code nav
-keymap("n", "<leader>d", "<Plug>(coc-definition)", opts)
-keymap("n", "<leader>n", "<Plug>(coc-references)", opts)
-keymap("n", "gy", "<Plug>(coc-type-definition)", opts)
-keymap("n", "gi", "<Plug>(coc-implementation)", opts)
-keymap("n", "<leader>r", "<Plug>(coc-rename)", opts)
+-- keymap("n", "<leader>d", "<Plug>(coc-definition)", opts)
+-- keymap("n", "<leader>n", "<Plug>(coc-references)", opts)
+-- keymap("n", "gy", "<Plug>(coc-type-definition)", opts)
+-- keymap("n", "gi", "<Plug>(coc-implementation)", opts)
+keymap("n", "<leader>r", ":lua =vim.lsp.buf.rename()<CR>", opts)
 
 -- Python format
 keymap("n", "<F9>", ":Black --target_version=py36<CR>", opts)

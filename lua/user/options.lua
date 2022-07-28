@@ -27,8 +27,8 @@ vim.opt.splitright = true                       -- split right
 vim.opt.signcolumn = "yes"                      -- always show the sign column
 vim.opt.termguicolors = true                    -- set terminal gui colors
 vim.opt.guifont = ""
+vim.opt.colorcolumn = "101"
 
 
 vim.cmd [[set formatoptions-=t]]                -- remove tabs from pasted content
-vim.g.python_highlight_all = 1
-
+vim.g.python_highlight_all = true
