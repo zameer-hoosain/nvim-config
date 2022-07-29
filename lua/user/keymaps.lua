@@ -12,11 +12,11 @@ vim.g.maplocalleader = " "
 
 -- Normal mode
 -- Toggle tree
-keymap("n", "<C-n>", ":NERDTreeToggle<CR>", opts)
+keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 
 -- Find files/Find in files
-keymap("n", "<C-p>", ":FZF<CR>", opts)
-keymap("n", "<C-g>", ":Ag<CR>", opts)
+keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
+keymap("n", "<C-g>", ":Telescope live_grep<CR>", opts)
 
 -- Navigate back/forth
 keymap("n", "<C-h>", "g;", opts)
@@ -51,9 +51,10 @@ keymap("n", "<leader>b", ":Git blame<CR>", opts)
 -- keymap("n", "gy", "<Plug>(coc-type-definition)", opts)
 -- keymap("n", "gi", "<Plug>(coc-implementation)", opts)
 keymap("n", "<leader>r", ":lua =vim.lsp.buf.rename()<CR>", opts)
+keymap("n", "gr", ":Telescope lsp_references<CR>", opts)
 
 -- Python format
-keymap("n", "<F9>", ":Black --target_version=py36<CR>", opts)
+keymap("n", "<F9>", ":lua =vim.lsp.buf.format()<CR>", opts)
 
 
 -- Terminal mode
