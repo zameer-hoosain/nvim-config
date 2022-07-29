@@ -11,10 +11,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Normal mode
--- ALE jump next/previous
-keymap("n", "<C-j>", ":ALENext", opts)
-keymap("n", "<C-k>", ":ALEPrevious", opts)
-
 -- Toggle tree
 keymap("n", "<C-n>", ":NERDTreeToggle<CR>", opts)
 
@@ -31,7 +27,6 @@ keymap("n", "<leader>h", ":wincmd h<CR>", opts)
 keymap("n", "<leader>j", ":wincmd j<CR>", opts)
 keymap("n", "<leader>k", ":wincmd k<CR>", opts)
 keymap("n", "<leader>l", ":wincmd l<CR>", opts)
-keymap("n", "<leader>w", ":W<CR>", opts)
 
 -- Splits
 keymap("n", "<leader>s", ":wincmd s<CR>", opts)
