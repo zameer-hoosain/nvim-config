@@ -11,7 +11,7 @@ null_ls.setup({
     debug = false,
     sources = {
         formatting.prettier,
-        formatting.black.with({ extra_args = { "--target_version=py36" } }),
+        formatting.black.with({ extra_args = { "--target-version=py36" } }),
         formatting.stylua,
         diagnostics.pylint,
         diagnostics.mypy.with({prefer_local="venv/bin"})
