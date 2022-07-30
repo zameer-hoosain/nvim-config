@@ -56,6 +56,8 @@ keymap("n", "gr", ":Telescope lsp_references<CR>", opts)
 -- Python format
 keymap("n", "<F9>", ":lua =vim.lsp.buf.format({ timeout_ms = 2000 })<CR>", opts)
 
+--Debug
+
 
 -- Terminal mode
 keymap("t", "<Esc>", "<C-\\><C-n>", term_opts)

@@ -58,6 +58,9 @@ return packer.startup(function(use)
             require("colorizer").setup()
         end,
     }) -- css colours
+    use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
+    use("lewis6991/impatient.nvim") -- Speedup plugin loads
+    use("folke/which-key.nvim")
 
     use("folke/tokyonight.nvim")
 
@@ -90,6 +93,24 @@ return packer.startup(function(use)
     -- Tree
     use("kyazdani42/nvim-web-devicons")
     use("kyazdani42/nvim-tree.lua")
+
+    -- Status line
+    use({
+        "nvim-lualine/lualine.nvim",
+        requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    })
+
+    -- Indent lines
+    use("lukas-reineke/indent-blankline.nvim")
+
+    --Debugging
+    use("mfussenegger/nvim-dap")
+    use("rcarriga/nvim-dap-ui")
+    use("Pocco81/dap-buddy.nvim")
+    -- python
+    use("mfussenegger/nvim-dap-python")
+    -- java
+    use("mfussenegger/nvim-jdtls")
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
