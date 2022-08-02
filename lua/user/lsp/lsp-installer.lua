@@ -30,7 +30,7 @@ local config = {
     signs = {
         active = signs,
     },
-    update_in_insert = true,
+    update_in_insert = false,
     underline = true,
     severity_sort = true,
     float = {
@@ -70,6 +70,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
     vim.keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, bufopts)
     vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
     vim.keymap.set("n", "<space>wl", function()
@@ -92,7 +93,6 @@ require("lspconfig")["jsonls"].setup({
 
 require("lspconfig")["pyright"].setup({
     on_attach = on_attach,
-    flags = require("user.lsp.settings.pyright"),
 })
 
 require("lspconfig")["sqlls"].setup({

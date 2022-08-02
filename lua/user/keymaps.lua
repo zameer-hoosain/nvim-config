@@ -54,7 +54,7 @@ keymap("n", "<leader>r", ":lua =vim.lsp.buf.rename()<CR>", opts)
 keymap("n", "gr", ":Telescope lsp_references<CR>", opts)
 
 -- Python format
-keymap("n", "<F9>", ":lua =vim.lsp.buf.format({ timeout_ms = 2000 })<CR>", opts)
+keymap("n", "<F9>", ":lua =vim.lsp.buf.format({ timeout_ms = 20000 })<CR>", opts)
 
 --Debug
 
