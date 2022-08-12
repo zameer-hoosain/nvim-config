@@ -108,3 +108,7 @@ require("lspconfig")["volar"].setup({
 require("lspconfig")["jdtls"].setup({
     on_attach = on_attach,
 })
+
+require("lspconfig")["tsserver"].setup({
+    on_attach = on_attach,
+})

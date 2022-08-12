@@ -36,7 +36,7 @@ keymap("n", "<leader>v", ":wincmd v<CR>", opts)
 keymap("n", "<leader>t", ":term<CR>", opts)
 
 -- Copy/Paste to system
-keymap("n", "<F2>", "\"+y<Esc>", opts)
+keymap("v", "<F2>", '\"+y<Esc>', opts)
 keymap("n", "<F4>", "\"+p<Esc>", opts)
 
 -- Emmet expand
